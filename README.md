@@ -6,6 +6,7 @@ O Maria Augusta RestoBar é um restaurante localizado em um charmoso bairro da c
 
 ## Participantes
 Kaique William Garrone
+
 Samuel Leite Pereira
 
 ## Acesso ao Site
