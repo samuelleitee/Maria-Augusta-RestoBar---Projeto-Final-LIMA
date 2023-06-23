@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
+
+* {
+    font-family: 'Spinnaker', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Header -- NavBar */
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.headerImage {
+    text-align: center;
+}
+
+nav {
+    background-color: #253D30;
+    color: #fff;
+    font-size: 2.0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100vw;
+    height: 50px;
+}
+
+.navItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover .navItems p{
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+.menuhamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #253D30;
+    transition: all 0.3s ease-in-out;
+} 
+
+@media (max-width: 921px) {
+    .menuhamburguer {
+        display: block;
+        margin: auto 100px;
+    }
+    .menuhamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menuhamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #fff;
+    }
+    .menuhamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #fff;
+    }
+    nav {
+        position: fixed;
+        left: 100%;
+        top: 0;
+        background-color: #253D30;
+        text-align: center;
+        width: 100%;
+        transition: 0.5s;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .navItems {
+        margin: 16px 0;
+    }
+    nav.active {
+        left: 0;
+    }
+    header {
+        flex-direction: row;
+        width: 100%;
+    }
+    header div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .headerImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Header -- NavBar */
+
+/* Cards -- Eventos */
+.tituloeventos {
+    margin-top: 50px;
+    font-size: 3.0rem;
+    color: #4B547D;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.cards div {
+    background-color: #4B547D;
+    padding: 40px;
+    max-width: 350px;
+    border-radius: 15px;
+    height: 442px;
+}
+
+.cards h4 {
+    margin-bottom: 10px;
+}
+
+.cards h3 {
+    background-color: #7A010A;
+    padding: 30px;
+    font-size: 2.5rem;
+}
+
+.cards p {
+    background-color: #7A010A;
+    padding: 0px 30px 30px 30px;
+    font-size: 2.0rem;
+}
+/* Cards -- Eventos */
+
+/* Footer -- Rodapé */
+footer {
+    background-color: #253D30;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.mainFooter {
+    display: flex;
+    justify-content: center;
+    margin: 30px 150px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+    .mainFooter {
+        margin: 30px 40px;
+    }
+}
+
+.formaIcone {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.formaIcone img {
+    height: 35px;
+    width: 35px;
+}
+
+.contatosFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contatosFooter a {
+    text-decoration: none;
+}
+
+.contatosFooter p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.contatosFooter a:hover p {
+    border-bottom: 1px solid #fff;
+}
+
+.contatosFooter div a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linksFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linksFooter p a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.linksFooter p a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p {
+    color: #fff;
+}
+
+.sobreFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sobreFooter p {
+    font-size: 1.5rem;
+    max-width: 300px;
+    text-align: justify;
+}
+
+.sobreFooter .tituloFooter {
+    font-size: 2.0rem;
+}
+
+.tituloFooter {
+    font-size: 2.0rem;
+}
+/* Footer -- Rodapé */

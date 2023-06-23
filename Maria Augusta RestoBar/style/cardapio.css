@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
+
+* {
+    font-family: 'Spinnaker', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Header -- NavBar */
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.headerImage {
+    text-align: center;
+}
+
+nav {
+    background-color: #253D30;
+    color: #fff;
+    font-size: 2.0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100vw;
+    height: 50px;
+}
+
+.navItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover .navItems p{
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+.menuhamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #253D30;
+    transition: all 0.3s ease-in-out;
+} 
+
+@media (max-width: 921px) {
+    .menuhamburguer {
+        display: block;
+        margin: auto 100px;
+    }
+    .menuhamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menuhamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #fff;
+    }
+    .menuhamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #fff;
+    }
+    nav {
+        position: fixed;
+        left: 100%;
+        top: 0;
+        background-color: #253D30;
+        text-align: center;
+        width: 100%;
+        transition: 0.5s;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .navItems {
+        margin: 16px 0;
+    }
+    nav.active {
+        left: 0;
+    }
+    header {
+        flex-direction: row;
+        width: 100%;
+    }
+    header div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .headerImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Header -- NavBar */
+
+/* Cardápio */
+.cardapio h1 {
+    text-align: center;
+    margin: 30px 0px;
+}
+    /* botões cardápio */
+.botoesCardapio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.botoesCardapio a {
+    text-decoration: none;
+}
+
+.botoesCardapio a button {
+    color: #7A010A;
+    background-color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(122, 1, 10, 1);
+    padding: 15px;
+    border-radius: 15px;
+    width: 160px;
+}
+
+.botoesCardapio a button:hover {
+    background-color: #7A010A;
+    color: #fff;
+    cursor: pointer;
+}
+    /* botões cardápio */
+
+    /* Configurações gerais */
+.imagens {
+    display: flex;
+    gap: 15px;
+    max-width: 780px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 250px;
+    height: 167px;
+}
+
+.card {
+    width: 250px;
+    height: 167px;
+    aspect-ratio: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "stack";
+    color: #fff;
+    font-size: 2.0rem;
+}
+
+.card > * {
+    grid-area: stack;
+}
+
+.card > figcaption {
+    display: grid;
+    align-items: end;
+    padding: 2.0rem 2.5rem;
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(33 44 55 / 0),
+        rgb(33 44 55 / 0),
+        rgb(33 44 55 / 0.75)
+    );
+}
+
+.card figcaption {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.card:hover figcaption {
+    opacity: 1;
+}
+    /* Configurações gerais */
+
+    /* comida de boteco */
+.comidaDeBoteco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    /* comida de boteco */
+
+    /* Pratos */
+.pratos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    /* Pratos */
+
+    /* Lanches */
+.lanches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    /* Lanches */
+
+    /* Sobremesas */
+.sobremesas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    /* Sobremesas */
+
+    /* Bebidas / Drinks */
+.bebidas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bebidas .card img {
+    width: 250px;
+    height: auto;
+}
+
+.bebidas .card {
+    width: 250px;
+    height: auto;
+}
+    /* Bebidas / Drinks */
+/* Cardápio */
+
+/* Footer -- Rodapé */
+footer {
+    background-color: #253D30;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.mainFooter {
+    display: flex;
+    justify-content: center;
+    margin: 30px 150px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+    .mainFooter {
+        margin: 30px 40px;
+    }
+}
+
+.formaIcone {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.formaIcone img {
+    height: 35px;
+    width: 35px;
+}
+
+.contatosFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contatosFooter a {
+    text-decoration: none;
+}
+
+.contatosFooter p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.contatosFooter a:hover p {
+    border-bottom: 1px solid #fff;
+}
+
+.contatosFooter div a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linksFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linksFooter p a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.linksFooter p a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p {
+    color: #fff;
+}
+
+.sobreFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sobreFooter p {
+    font-size: 1.5rem;
+    max-width: 300px;
+    text-align: justify;
+}
+
+.sobreFooter .tituloFooter {
+    font-size: 2.0rem;
+}
+
+.tituloFooter {
+    font-size: 2.0rem;
+}
+/* Footer -- Rodapé */

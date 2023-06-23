@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reservas.css">
+    <link rel="icon" href="image/mariaaugustaicone.svg" sizes="32x32" />
+    <title>Reservas - Maria Augusta RestoBar</title>
+</head>
+
+<body>
+    <!-- Header -- NavBar -->
+    <header>
+        <div>
+            <div class="headerImage">
+                <img src="image/mariaaugusta.svg" alt="Maria Augusta Logo">
+            </div>  
+
+            <nav>
+                <a href="home.html">
+                    <div class="navItems">
+                        <p>Início</p>
+                    </div>
+                </a>
+
+                <a href="sobre.html">
+                    <div class="navItems">
+                        <p>Sobre nós</p>
+                    </div>
+                </a>
+
+                <a href="cardapio.html">
+                    <div class="navItems">
+                        <p>Cardápio</p>
+                    </div>
+                </a>
+
+                <a href="eventos.html">
+                    <div class="navItems">
+                        <p>Eventos</p>
+                    </div>
+                </a>
+
+                <a href="reservas.html">
+                    <div class="navItems">
+                        <p>Reservas</p>
+                    </div>
+                </a>
+            </nav>
+            <div class="menuresponsivo">
+                <div class="menuhamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -- NavBar -->
+
+    <!-- Formulário -- Reservas -->
+    <div class="formulario">
+        <form action=""> <!-- action: indica para onde o contúdo do formulário irá. -->
+            <label for="pnome">Primeiro nome: </label>
+            <input type="text" id="pnome" placeholder="Digite o seu primeiro nome">
+
+            <label for="snome">Segundo nome: </label>
+            <input type="text" id="snome" placeholder="Digite o seu segundo nome">
+            
+
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="Digite o seu melhor e-mail">
+            
+            <label for="lugares">Número de Lugares: </label>
+            <select name="lugares" id="lugares">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+
+            <label for="data">Data: </label>
+            <input type="date" id="data" placeholder="Selecione o dia da reserva">
+
+            <label for="pais">País: </label>
+            <select name="pais" id="pais">
+                <option value="brasil">Brazil</option>
+                <option value="canada">Canadian</option>
+                <option value="japao">Japan</option>
+            </select>
+
+            <input type="submit" value="Enviar" onclick="reservafeita()"> <!-- Ao clicar no botão 'type="submit"', o conteúdo digitado será enviado para a action referida -->
+        </form> 
+    </div>
+    <!-- Formulário -- Reservas -->
+
+    <!-- Footer -- Rodapé-->
+    <footer id="contatos">
+        <div class="mainFooter">
+            <div class="sobreFooter">
+                <p class="tituloFooter">Sobre nós</p>
+                <p>A proposta do Maria Augusta RestoBar é ser um Restaurante Bar (como o título diz) aconchegante e informal, agradável e despojado, reconhecido e acessível, de maneira a unir os lados da mesma rua para todos os públicos democraticamente.</p>
+            </div>
+
+            <div class="linksFooter">
+                <p class="tituloFooter">Links rápidos</p>
+                <p>
+                    <a href="home.html">Início</a>
+                </p>
+                <p>
+                    <a href="sobre.html">sobre Nós</a>
+                </p>
+                <p>
+                    <a href="cardapio.html">Cardápio</a>
+                </p>
+                <p>
+                    <a href="eventos.html">Eventos</a>
+                </p>
+                <p>
+                    <a href="reservas.html">Reservas</a>
+                </p>
+            </div>
+
+            <div class="contatosFooter">  
+                <div>       
+                    <a href="https://www.instagram.com/mariaaugustarestobar/" target="_blank">
+                        <div class="formaIcone">
+                            <img src="image/instagram.svg" alt="Instagram">
+                        </div>
+                        <p>@mariaaugustarestobar</p>
+                    </a> 
+                </div>
+
+                <div>
+                    <a href="tel:+551126149152" target="_blank">
+                        <div class="formaIcone">
+                            <img src="image/telefone.svg" alt="Telefone">
+                        </div>
+                        <p>(11) 2614-9152</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.facebook.com/mariaaugustarestobar/" target="_blank">
+                        <div class="formaIcone">
+                            <img src="image/facebook.svg" alt="Facebook">
+                        </div>
+                        <p>Maria Augusta RestoBar</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.waze.com/pt-BR/livemap/directions/brasil/sao-paulo/maria-augusta-restobar?place=ChIJB7zcrGBZzpQRbB_QXzKzvt8" target="_blank">
+                        <div class="formaIcone">
+                            <img src="image/localizacao.svg" alt="Localização">
+                        </div>
+                        <p>R. Augusta, 2147 (Waze)</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.google.com/maps/place/Maria+Augusta+RestoBar/@-23.5608984,-46.6629741,15z/data=!4m5!3m4!1s0x0:0xdfbeb3325fd01f6c!8m2!3d-23.5608984!4d-46.6629741" target="_blank">
+                        <div class="formaIcone">
+                            <img src="image/maps.svg" alt="Mapa">
+                        </div>
+                        <p>R. Augusta, 2147 (Maps)</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -- Rodapé -->
+
+    <script src="scripts/reservas.js"></script>
+</body>
+</html>
